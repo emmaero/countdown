@@ -37,8 +37,13 @@ Once you have fixed the CTA button, you should be able to click it. On click, th
    - Potential solution(s)?
 
 ### Answer
-      Place a brief explanation here. You can explain this further during the technical interview.
+Place a brief explanation here. You can explain this further during the technical interview.
 
+   - Uncaught DOMException: Blocked a frame with origin "http://127.0.0.1:8080" from accessing a cross-origin frame. at e.value (https://lcx-embed.bambuser.com/powered-by-bambuser-theme/embed.js:8:132165)
+   - This happens because the frame with unsecure protocol is try to access bambuser player that is using SSL certificate. It's using http protocol instead of https protocol.
+   - Make sure you are using a ssl certificate in your server.
+
+    
 
 See how to reproduce the error: [Video](producing-iframe-error.mp4)
 
